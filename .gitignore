@@ -1,4 +1,4 @@
 SPBikes/.vs/
 SPBikes/.vs/*
-SPBikes/SPBikes/SPBikes/obj/*
-
+SPBikes/SPBikes/obj/
+SPBikes/SPBikes/bin/
