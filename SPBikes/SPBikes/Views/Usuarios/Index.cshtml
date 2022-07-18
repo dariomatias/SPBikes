@@ -1,0 +1,206 @@
+﻿@model IEnumerable<SPBikes.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAlta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaBaja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaAlta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaBaja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>*@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index - My ASP.NET Application</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
+
+    <script src="/Scripts/modernizr-2.8.3.js"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Application name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/Contact">Contact</a></li>
+                    <li><a href="/Usuarios/Create">Alta Usuario</a></li>
+                    <li><a href="/Usuarios/Edit">Editar Usuario</a></li>
+                    <li><a href="/Usuarios/Delete">Eliminar Usuario</a></li>
+                    <li><a href="/Usuarios">Listado Usuarios</a></li>
+                    <li><a href="/Usuarios/Details">Detalle Usuarios</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+        <h2>Index</h2>
+
+        <p>
+            <a href="/Usuarios/Create">Create New</a>
+        </p>
+        <table class="table">
+            <tr>
+
+                <th>
+                    Email
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Telefono
+                </th>
+                <th>
+                    FechaAlta
+                </th>
+                <th>
+                    FechaBaja
+                </th>
+                <th>
+                    Activo
+                </th>
+                <th></th>
+            </tr>
+
+            <tr>
+
+                <td>
+                    esba@esba.com.ar
+                </td>
+                <td>
+                    Instituto
+                </td>
+                <td>
+                    ESBA
+                </td>
+                <td>
+                    Monroe 4171
+                </td>
+                <td>
+                    011-4311-1232
+                </td>
+                <td>
+                    1/1/0001 00:00:00
+                </td>
+                <td>
+                    1/1/0001 00:00:00
+                </td>
+                <td>
+                    <input class="check-box" disabled="disabled" type="checkbox" />
+                </td>
+                <td>
+                    <a href="/Usuarios/Edit/1">Edit</a> |
+                    <a href="/Usuarios/Details/1">Details</a> |
+                    <a href="/Usuarios/Delete/1">Delete</a>
+                </td>
+            </tr>
+
+        </table>
+
+        <hr />
+        <footer>
+            <p>&copy; 2022 - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="/Scripts/jquery-3.4.1.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+
+
+</body>
+</html>

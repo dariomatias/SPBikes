@@ -18,4 +18,6 @@ namespace SPBikes.Models
         public bool Activo { get; set; }
 
     }
+
+
 }
