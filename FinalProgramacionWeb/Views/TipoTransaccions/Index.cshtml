@@ -1,0 +1,71 @@
+﻿@using System.Web.Caching
+@model IEnumerable<Datos.Models.TipoTransaccion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "../Shared/_CustomLayout.cshtml";
+}
+
+<h2>Tipos de Transaccion</h2>
+
+@*@Html.Partial("_Slider")*@
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    //var active = item.Activo ? "inactivo" : "activo";
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @{
+                if (item.Activo)
+                {
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                    @Html.Raw(" | ")
+                    @Html.ActionLink("Desactivar", "Delete", new { id = item.Id })
+                }
+                else
+                {
+                    {
+                        @Html.ActionLink("Activar", "Activate", new { id = item.Id })
+                    }
+                }
+            }
+        </td>
+    </tr>
+}
+
+</table>
+
+<script>
+    function cambiarEstado() {
+        var slider = document.getElementById('slider');
+        var activo = !slider.classList.contains('inactivo');
+
+        if (activo) {
+            slider.classList.remove('activo');
+            slider.classList.add('inactivo');
+        } else {
+            slider.classList.remove('inactivo');
+            slider.classList.add('activo');
+        }
+    }
+</script>
