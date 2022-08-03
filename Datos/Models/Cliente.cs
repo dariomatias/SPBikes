@@ -6,6 +6,7 @@ namespace Datos.Models
 {
     public class Cliente : EntidadBase
     {
+        [Key]
         [Required]
         public int Id { get; set; }
 
@@ -23,7 +24,6 @@ namespace Datos.Models
         [DisplayName("Apellido")]
         public string Apellido { get; set; }
 
-        [Key]
         [Required]
         [StringLength(15)]
         [RegexStringValidator("[0-9]{2}-[0-9]{6,8}-[0-9]{1}")]
@@ -32,7 +32,7 @@ namespace Datos.Models
 
         [Required]
         [StringLength(100)]
-        [RegexStringValidator("[A-Z,a-z, ,']{0,50} [0-9]{0,8}")]
+        [RegexStringValidator("[A-Z,a-z, ,']{0,50} [0-9]{1,8}")]
         [DisplayName("Direccion")]
         public string Direccion { get; set; }
 

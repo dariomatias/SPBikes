@@ -261,6 +261,10 @@
     <Compile Include="Migrations\202208012029202_restore-ket.designer.cs">
       <DependentUpon>202208012029202_restore-ket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208031502566_index-en-clientes.cs" />
+    <Compile Include="Migrations\202208031502566_index-en-clientes.designer.cs">
+      <DependentUpon>202208031502566_index-en-clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -454,9 +458,11 @@
     <Content Include="Views\Shared\_Slider.cshtml" />
     <Content Include="Views\Clientes\Create.cshtml" />
     <Content Include="Views\Clientes\Delete.cshtml" />
-    <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Clientes\Activate.cshtml" />
+    <Content Include="Views\Shared\Clientes\_CamposComunesEditables.cshtml" />
+    <Content Include="Views\Shared\Clientes\_CamposComunesReadOnly.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -537,6 +543,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208012029202_restore-ket.resx">
       <DependentUpon>202208012029202_restore-ket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208031502566_index-en-clientes.resx">
+      <DependentUpon>202208031502566_index-en-clientes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
