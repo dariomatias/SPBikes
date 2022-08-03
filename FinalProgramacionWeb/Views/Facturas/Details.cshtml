@@ -1,0 +1,15 @@
+﻿@model Datos.Models.Factura
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    @Html.Partial("Facturas/_CamposComunesReadOnly")
+</div>
+<p>
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

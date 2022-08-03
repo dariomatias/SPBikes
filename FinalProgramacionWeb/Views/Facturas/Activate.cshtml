@@ -1,4 +1,4 @@
-﻿@model Datos.Models.Cliente
+﻿@model Datos.Models.Factura
 
 @{
     ViewBag.Title = "Activate";
@@ -9,15 +9,14 @@
 
 <h3>Esta seguro que desea activar este registro?</h3>
 <div>
-    
-    @Html.Partial("Clientes/_CamposComunesReadOnly", Model)
+    @Html.Partial("Facturas/_CamposComunesReadOnly", Model)
 
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Activar" class="btn btn-success"/> |
+            <input type="submit" value="Activar" class="btn btn-success" /> |
             @Html.ActionLink("Volver a la lista", "Index")
         </div>
     }

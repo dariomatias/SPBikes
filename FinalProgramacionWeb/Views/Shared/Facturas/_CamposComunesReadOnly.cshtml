@@ -1,0 +1,55 @@
+﻿@model Datos.Models.Factura
+
+<h4>Factura</h4>
+<hr />
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.NumeroDeFactura)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.NumeroDeFactura)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Cliente.CUIT)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Cliente.CUIT)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Cliente.RazonSocial)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Cliente.RazonSocial)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Importe)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Importe)
+    </dd>
+    
+    <div>
+        <h3>Productos</h3>
+        <table class="table">
+            <tr>
+                <th>SKU</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+            </tr>
+            @{
+                foreach (var producto in Model.Productos)
+                {
+                    <tr>@producto.SKU</tr>
+                    <tr>@producto.Nombre</tr>
+                    <tr>@producto.Descripcion</tr>
+                }
+            }
+        </table>
+
+    </div>
+
+</dl>

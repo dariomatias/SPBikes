@@ -20,6 +20,7 @@ namespace Datos.Models
         [StringLength(100)]
         [DisplayName("Descripcion")]
         public string Descripcion { get; set; }
+
     }
 
 }

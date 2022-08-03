@@ -170,6 +170,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\FacturasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
@@ -265,6 +266,18 @@
     <Compile Include="Migrations\202208031502566_index-en-clientes.cs" />
     <Compile Include="Migrations\202208031502566_index-en-clientes.designer.cs">
       <DependentUpon>202208031502566_index-en-clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208031937026_relacion-factura-productos.cs" />
+    <Compile Include="Migrations\202208031937026_relacion-factura-productos.designer.cs">
+      <DependentUpon>202208031937026_relacion-factura-productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208032016517_nuevo-campo-en-facturas.cs" />
+    <Compile Include="Migrations\202208032016517_nuevo-campo-en-facturas.designer.cs">
+      <DependentUpon>202208032016517_nuevo-campo-en-facturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208032020071_nuevo-campo-importe-factura.cs" />
+    <Compile Include="Migrations\202208032020071_nuevo-campo-importe-factura.designer.cs">
+      <DependentUpon>202208032020071_nuevo-campo-importe-factura.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -471,6 +484,12 @@
     <Content Include="Views\Shared\Productos\_CamposComunesEditables.cshtml" />
     <Content Include="Views\Shared\Productos\_CamposComunesReadOnly.cshtml" />
     <Content Include="Views\Productos\Activate.cshtml" />
+    <Content Include="Views\Facturas\Create.cshtml" />
+    <Content Include="Views\Facturas\Delete.cshtml" />
+    <Content Include="Views\Facturas\Details.cshtml" />
+    <Content Include="Views\Facturas\Index.cshtml" />
+    <Content Include="Views\Shared\Facturas\_CamposComunesReadOnly.cshtml" />
+    <Content Include="Views\Facturas\Activate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -554,6 +573,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208031502566_index-en-clientes.resx">
       <DependentUpon>202208031502566_index-en-clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208031937026_relacion-factura-productos.resx">
+      <DependentUpon>202208031937026_relacion-factura-productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208032016517_nuevo-campo-en-facturas.resx">
+      <DependentUpon>202208032016517_nuevo-campo-en-facturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208032020071_nuevo-campo-importe-factura.resx">
+      <DependentUpon>202208032020071_nuevo-campo-importe-factura.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
