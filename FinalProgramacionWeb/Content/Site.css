@@ -40,3 +40,13 @@ textarea {
 .form-group > container {
     margin: 25px;
 }
+
+a.login-details {
+    font-size: 12px;
+}
+
+.login-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

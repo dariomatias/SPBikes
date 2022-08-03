@@ -3,20 +3,19 @@
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
-
-    <ul class="nav-link scrollto active">
-        <li>
-            @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesion</a></li>
-    </ul>
+        @Html.AntiForgeryToken()
+        <div class="login-details-container">
+            <li class="m-2">
+                @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "login-details" })
+            </li>
+            <li class="m-2">
+                <a class="login-details" href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesion</a>
+            </li>
+        </div>
     }
 }
 else
 {
-    <ul class="nav-link scrollto active">
         <li>@Html.ActionLink("Registro", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Iniciar Sesion", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
 }
