@@ -1,0 +1,39 @@
+﻿@model (Datos.Models.Producto producto, bool puedeActivarse)
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<h2>Activar</h2>
+
+<h3>Esta seguro que desea activar este registro?</h3>
+<div>
+
+    @Html.Partial("Productos/_CamposComunesReadOnly", Model.producto)
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        {
+            if (Model.puedeActivarse)
+            {
+                <div class="form-actions no-color">
+                    <input type="submit" value="Activar" class="btn btn-success" />
+                </div>
+                @Html.Raw(" | ")
+            }
+            else
+            {
+
+                <div class="form-actions no-color">
+                    <span class="text-danger field-validation-error">
+                        <span>Ya existe un producto con el mismo SKU. Este producto no puede reactivarse.</span>
+                    </span>
+                </div>
+            }
+        }
+        @Html.ActionLink("Volver a la lista", "Index")
+    }
+</div>

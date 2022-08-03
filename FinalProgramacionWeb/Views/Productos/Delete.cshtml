@@ -1,0 +1,24 @@
+﻿@model Datos.Models.Producto
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<h2>Desactivar</h2>
+
+<h3>Esta seguro que desea desactivar este registro?</h3>
+<div>
+    
+    @Html.Partial("Productos/_CamposComunesReadOnly", Model)
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Desactivar" class="btn btn-danger" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

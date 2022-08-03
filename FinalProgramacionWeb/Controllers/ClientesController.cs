@@ -16,21 +16,16 @@ namespace FinalProgramacionWeb.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Clientes
         public ActionResult Index()
         {
             return View(db.Clientes.ToList());
         }
-
-        // GET: Clientes/Create
+        
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: Clientes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CUIT,Id,RazonSocial,Nombre,Apellido,Direccion,Telefono")] Cliente cliente)

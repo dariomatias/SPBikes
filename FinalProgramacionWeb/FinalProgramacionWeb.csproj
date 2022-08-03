@@ -172,6 +172,7 @@
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\RolsController.cs" />
     <Compile Include="Controllers\TipoTransaccionsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -463,6 +464,13 @@
     <Content Include="Views\Clientes\Activate.cshtml" />
     <Content Include="Views\Shared\Clientes\_CamposComunesEditables.cshtml" />
     <Content Include="Views\Shared\Clientes\_CamposComunesReadOnly.cshtml" />
+    <Content Include="Views\Productos\Create.cshtml" />
+    <Content Include="Views\Productos\Delete.cshtml" />
+    <Content Include="Views\Productos\Edit.cshtml" />
+    <Content Include="Views\Productos\Index.cshtml" />
+    <Content Include="Views\Shared\Productos\_CamposComunesEditables.cshtml" />
+    <Content Include="Views\Shared\Productos\_CamposComunesReadOnly.cshtml" />
+    <Content Include="Views\Productos\Activate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
